@@ -13,4 +13,4 @@ export function render(){
   );
 }
 
-store.dispatch({type: '@@INIT'})
+store.dispatch({ type: '@@INIT' });
