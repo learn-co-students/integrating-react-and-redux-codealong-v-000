@@ -12,11 +12,10 @@ function createStore(reducer){
       return state;
     }
 
-    function render(){
-      console.log('render called')
+    return {
+      dispatch,
+      getState
     }
-
-    return {dispatch: dispatch, getState: getState}
   }
 
   function changeCount(state = {count: 0}, action){
@@ -31,11 +30,12 @@ function createStore(reducer){
 
     function render(){
       let container = document.getElementById('container')
-      container.textContent = store.getState.count
+      container.textContent = store.getState().count
     }
 
     let store = createStore(changeCount)
+    store.dispatch({ type: '@@INIT' });
     let button = document.getElementById('button');
     button.addEventListener('click', function(){
-      dispatch({type: 'INCREASE_COUNT'})
+      store.dispatch({type: 'INCREASE_COUNT'})
     })
