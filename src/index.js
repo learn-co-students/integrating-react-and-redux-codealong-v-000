@@ -8,9 +8,9 @@ const store = createStore(changeCount);
  
 export function render() {
   ReactDOM.render(
-    <App store={store} />,
-      document.getElementById('root')
-    );
-  };
+    <App store={store}/>,
+    document.getElementById('root')
+  );
+};
  
- store.dispatch({type: '@@INIT'})
+store.dispatch({ type: '@@INIT' });

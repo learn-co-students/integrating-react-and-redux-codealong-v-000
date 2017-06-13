@@ -7,5 +7,5 @@ export default function changeCount(state = {
  
     default:
       return state;
-  };
+  }
 };

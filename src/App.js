@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Counter from './components/Counter'
+import Counter from './components/Counter';
 class App extends Component {
-  render() {
+  render(props) {
     return (
       <div className="App" >
-        <Counter />
+        <Counter store={this.props.store}/>
       </div>
-    );
+    )
   }
 }
 
