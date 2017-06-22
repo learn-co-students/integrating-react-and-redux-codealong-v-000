@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import changeCount from './reducers/changeCount';
+import createStore from './createStore';
 
-export function render() {
+const store = createStore(changeCount);
+
+export default function render() {
   ReactDOM.render(
-    <App />,
+    <App store={store} />,
     document.getElementById('root')
   );
 };
 
-render();
+store.dispatch({type: '@@INIT'})
