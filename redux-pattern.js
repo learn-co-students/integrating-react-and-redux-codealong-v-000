@@ -6,17 +6,17 @@ function createStore(reducer) {
     console.log(`the state is ${state.count}`);
     console.log(`the action is ${action.type}`);
     render();
-  };
+  }
 
   function getState(){
     return state;
-  };
+  }
 
   return {
     dispatch,
     getState
   };
-};
+}
 
 function changeCount(state = {
   count: 0,
@@ -26,8 +26,8 @@ function changeCount(state = {
       return { count: state.count + 1 };
     default:
       return state;
-  };
-};
+  }
+}
 
 
 function render(){
@@ -39,5 +39,5 @@ const store = createStore(changeCount);
 let button = document.getElementById('button');
 
 button.addEventListener('click', function() {
-  store.dispatch({ type: 'INCREASE_COUNT' })
+  store.dispatch({ type: 'INCREASE_COUNT' });
 });
