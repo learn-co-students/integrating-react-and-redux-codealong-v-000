@@ -5,7 +5,6 @@ export default (props) => {
  const handleOnClick = () => {
    props.store.dispatch({ type: 'INCREASE_COUNT' });
  }
- debugger
 
  return (
    <div>
