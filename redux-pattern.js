@@ -25,7 +25,7 @@ function changeCount(state = {
     case 'INCREASE_COUNT':
       return { count: state.count + 1 };
     default:
-      return state;
+      return state
   };
 };
 
