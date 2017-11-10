@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Counter from './components/Counter'
+import Counter from './components/Counter';
 
 class App extends Component {
+
   render() {
     return (
       <div className="App" >
