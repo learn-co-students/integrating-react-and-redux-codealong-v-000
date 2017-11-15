@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import changeState from './reducers/changeState';
+import createStore from './createStore';
+
+const store = createStore(changeState);
 
 export function render() {
   ReactDOM.render(
-    <App />,
+    <App store={store} />,
     document.getElementById('root')
   );
+
 };
 
-render();
+store.dispatch({ type: '@@INIT' });
