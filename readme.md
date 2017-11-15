@@ -132,7 +132,7 @@ export default function changeCount(state = {
 
     default:
       return state;
-  };
+  }
 };
 ```
 
@@ -190,7 +190,7 @@ So we'll do the following:
         <button onClick={handleOnClick}>
           Click Me
         </button>
-        <div>{props.store.getState().count}</div>
+        <div>{props.store.getState() ? props.store.getState().count : 0}</div>
       </div>
     )
   };
