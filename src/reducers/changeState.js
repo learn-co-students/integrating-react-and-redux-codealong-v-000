@@ -17,9 +17,6 @@ export default function changeState(state = {count: 0}, action) {
     case 'BLUE':
       return { count: state.count, avatar: state.avatar, background: 'blue' };
       
-    case 'BLUE': 
-      return { count: state.count, avatar: state.avatar, background: 'blue' };
-      
     case 'RED': 
       return { count: state.count, avatar: state.avatar, background: 'red' };
       
@@ -31,5 +28,5 @@ export default function changeState(state = {count: 0}, action) {
 
     default:
       return state;
-  };
+  }
 };

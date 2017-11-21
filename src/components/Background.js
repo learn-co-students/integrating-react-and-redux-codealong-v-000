@@ -18,10 +18,10 @@ import React from 'react'
    return (
      <div>
         <h3 className={props.store.getState().background}>what color am i ?</h3>
-        <button onClick={handleOnClickBlue}>TurnBlue</button>
-        <button onClick={handleOnClickGreen}>TurnGreen</button>
-        <button onClick={handleOnClickRed}>TurnRed</button>
-        <button onClick={handleOnClickYellow}>TurnYellow</button>
+        <button onClick={handleOnClickBlue} className="blue">TurnBlue</button>
+        <button onClick={handleOnClickGreen} className="green">TurnGreen</button>
+        <button onClick={handleOnClickRed} className="red">TurnRed</button>
+        <button onClick={handleOnClickYellow} className="yellow">TurnYellow</button>
      </div>
    )
  };
