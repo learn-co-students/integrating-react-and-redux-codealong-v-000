@@ -5,6 +5,7 @@ import changeCount from './reducers/changeCount';
 import createStore from './createStore';
 
 const store = createStore(changeCount);
+store.dispatch({ type: '@@INIT' });
 
 export function render() {
   ReactDOM.render(
