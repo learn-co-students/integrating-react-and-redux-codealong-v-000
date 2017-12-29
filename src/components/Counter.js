@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-export default (props) => {
+export default ({ store }) => {
+  const handleClick = () => {
+    store.dispatch({ type: 'INCREASE_COUNT' });
+  };
   return (
     <div>
-      Counter Component
+      <button onClick={handleClick}>Click Me</button>
+      <div>{store.getState().count}</div>
     </div>
-  )
+  );
 };
