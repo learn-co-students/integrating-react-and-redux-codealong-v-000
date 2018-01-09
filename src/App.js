@@ -1,14 +1,18 @@
-import React, { Component } from 'react';
-import Counter from './components/Counter'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import changeCount from './reducers/changeCount';
+import createStore from './createStore';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App" >
-        <Counter store={this.props.store} />
-      </div>
-    );
-  }
-}
+const store = createStore(changeCount);
 
-export default App;
+export function render() {
+  ReactDOM.render(
+    <App store={store} />,
+    document.getElementById('root')
+  );
+};
+
+store.dispatch({ type: '@@INIT' });
+
+// remove render() here
