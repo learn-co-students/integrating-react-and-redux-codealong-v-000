@@ -1,0 +1,10 @@
+<%= form_for @deduction do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %><br>
+<%= f.radio_button(:is_flat, true) %>Flat |
+<%= f.label :amount %>
+<%= f.text_field :amount %><br>
+<%= f.radio_button(:is_percentage, true) %>Percentage<br><br>
+
+<%= f.submit %>
+<% end %>
