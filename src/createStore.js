@@ -1,3 +1,5 @@
+import { render } from './index.js';
+ 
 export default function createStore(reducer) {
   let state;
  
@@ -5,7 +7,7 @@ export default function createStore(reducer) {
     state = reducer(state, action)
     console.log(`the state is ${state.count}`)
     console.log(`the action is ${action.type}`)
-    // render()
+    render();
   };
  
   function getState() {
