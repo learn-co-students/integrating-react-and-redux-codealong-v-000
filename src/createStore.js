@@ -7,7 +7,7 @@ export default function createStore(reducer) {
     state = reducer(state, action)
     console.log(`the state is ${state.count}`)
     console.log(`the action is ${action.type}`)
-    render()
+    render() //re-render everything from index.js
   };
 
   function getState() {
