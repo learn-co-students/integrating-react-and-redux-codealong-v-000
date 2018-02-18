@@ -1,4 +1,4 @@
-function changeCount(state = {
+export default function changeCount(state = {
   count: 0,
 }, action) {
   switch (action.type) {
