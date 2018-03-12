@@ -1,13 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react'
+ 
+export default (props) => {
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App" >
-        Counter Component here.
-      </div>
-    );
+  const handleOnClick = () => {
+    props.store.dispatch({ type: 'INCREASE_COUNT' });
   }
-}
 
-export default App;
+  return (
+    <div>
+      <button onClick={handleOnClick}>
+        Click Me
+      </button>
+      <div>{props.store.getState().count}</div>
+    </div>
+  )
+};
