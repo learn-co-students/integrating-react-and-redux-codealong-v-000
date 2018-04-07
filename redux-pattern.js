@@ -2,6 +2,7 @@ function createStore(reducer) {
   let state;
 
   function dispatch(action) {
+    console.log(`the state is ${state.count}`);
     state = reducer(state, action);
     console.log(`the state is ${state.count}`);
     console.log(`the action is ${action.type}`);
