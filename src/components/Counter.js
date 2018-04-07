@@ -1,9 +1,14 @@
 import React from 'react'
 
 export default (props) => {
+  const handleCkick = () => {
+    props.store.dispatch({ type: 'INCREASE_COUNT' })
+  }
+
   return (
     <div>
-      Counter Component
+      <button onClick={handleCkick}>Click Me</button>
+      <div>{props.store.getState().count}</div>
     </div>
   )
-};
+}
