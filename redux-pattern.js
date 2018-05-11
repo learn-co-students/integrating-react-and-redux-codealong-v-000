@@ -1,43 +1,51 @@
-function createStore(reducer) {
-  let state;
+// moved to createStore.js
+// function createStore(reducer) {
+//   let state;
 
-  function dispatch(action) {
-    state = reducer(state, action);
-    console.log(`the state is ${state.count}`);
-    console.log(`the action is ${action.type}`);
-    render();
-  };
+//   function dispatch(action) {
+//     state = reducer(state, action);
+//     console.log(`the state is ${state.count}`);
+//     console.log(`the action is ${action.type}`);
+//     render();
+//   };
 
-  function getState(){
-    return state;
-  };
+//   function getState(){
+//     return state;
+//   };
 
-  return {
-    dispatch,
-    getState
-  };
-};
-
-function changeCount(state = {
-  count: 0,
-}, action) {
-  switch (action.type) {
-    case 'INCREASE_COUNT':
-      return { count: state.count + 1 };
-    default:
-      return state;
-  };
-};
+//   return {
+//     dispatch,
+//     getState
+//   };
+// };
 
 
-function render(){
-  let container = document.getElementById('container');
-  container.innerHTML = store.getState().count;
-}
+// moved to reducers/changeCounter.js
+// function changeCount(state = {
+//   count: 0,
+// }, action) {
+//   switch (action.type) {
+//     case 'INCREASE_COUNT':
+//       return { count: state.count + 1 };
+//     default:
+//       return state;
+//   };
+// };
 
-const store = createStore(changeCount);
-let button = document.getElementById('button');
+//this is now function holding ReactDom.render()  in index.js
+// function render(){
+//   let container = document.getElementById('container');
+//   container.innerHTML = store.getState().count;
+// }
 
-button.addEventListener('click', function() {
-  store.dispatch({ type: 'INCREASE_COUNT' })
-});
+// moved to index.js
+// const store = createStore(changeCount);
+
+
+//this is in counter component now
+// let button = document.getElementById('button');
+
+//this is in counter component now
+// button.addEventListener('click', function() {
+//   store.dispatch({ type: 'INCREASE_COUNT' })
+// });
