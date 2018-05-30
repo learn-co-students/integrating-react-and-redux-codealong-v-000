@@ -1,4 +1,4 @@
-function createStore(reducer) {
+/*function createStore(reducer) {
   let state;
 
   function dispatch(action) {
@@ -40,4 +40,4 @@ let button = document.getElementById('button');
 
 button.addEventListener('click', function() {
   store.dispatch({ type: 'INCREASE_COUNT' })
-});
+});*/
