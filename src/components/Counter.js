@@ -4,6 +4,7 @@ export default (props) => {
   return (
     <div>
       Counter Component
+      //
     </div>
   )
 };
