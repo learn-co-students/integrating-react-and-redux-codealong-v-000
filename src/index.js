@@ -1,12 +1,20 @@
+// ./src/index.js
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import changeCount from './reducers/changeCount';
+import createStore from './createStore';
+
+const store = createStore(changeCount);
 
 export function render() {
   ReactDOM.render(
-    <App />,
-    document.getElementById('root')
+    <App store={store} />,
+    document.getElementById('container')
   );
 };
 
-render();
+store.dispatch({ type: '@@INIT' });
+
+// remove render() here
