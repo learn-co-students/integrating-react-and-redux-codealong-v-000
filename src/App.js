@@ -7,7 +7,7 @@ class App extends Component {
       <div className="App" >
         <Counter store={this.props.store}/>
       </div>
-    );
+    )
   }
 }
 

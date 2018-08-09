@@ -11,7 +11,7 @@ export function render() {
   ReactDOM.render(
     <App store={store} />,
     document.getElementById('root')
-  );
-};
+  )
+}
 
-render();
+store.dispatch({ type: '@@INIT' })
