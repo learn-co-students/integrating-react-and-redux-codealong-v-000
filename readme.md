@@ -1,4 +1,4 @@
-Integrating createStore with React
+leIntegrating createStore with React
 ==============
 
 In this lesson, we will learn how to integrate our createStore library with our React application. By the end of the lesson you will be able to:
