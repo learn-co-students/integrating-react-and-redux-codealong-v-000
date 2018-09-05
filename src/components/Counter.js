@@ -3,7 +3,8 @@ import React from 'react'
 export default (props) => {
   return (
     <div>
-      Counter Component
+      <button>Cick Me</button>
+      <div>0</div>
     </div>
   )
 };
