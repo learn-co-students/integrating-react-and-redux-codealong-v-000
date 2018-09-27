@@ -6,7 +6,7 @@ In this lesson, we will learn how to integrate our createStore library with our 
   * Integrate the __createStore()__ function with React.
   * Properly structure a __React & Redux__ code base.
 
-## Our Goal
+## Our Goal/Lecture
 
 Our goal is to rebuild our counter application with the same user experience, but this time we will use React to do it. So once again, when we click on a button the count should increase.
 
