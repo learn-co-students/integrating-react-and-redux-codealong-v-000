@@ -13,4 +13,5 @@ export function render() {
   );
 };
  
-render();
+store.dispatch({ type: '@@INIT' });
+ 
